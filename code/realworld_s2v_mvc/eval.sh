@@ -44,7 +44,7 @@ then
     mkdir -p $save_dir
 fi
 
-python evaluate.py \
+python2 evaluate.py \
     -prob_q $prob_q \
     -n_step $n_step \
     -data_root ../../data/memetracker \

@@ -30,7 +30,7 @@ def greedy(G):
     covered_set = set()
     numCoveredEdges = 0
     idxes = range(nx.number_of_nodes(G))
-    idxes = sorted(idxes, key=lambda x: len(nx.neighbors(G, x)), reverse=True)
+    idxes = sorted(idxes, key=lambda x: len(list(nx.neighbors(G, x))), reverse=True)
     pos = 0
     while numCoveredEdges < nx.number_of_edges(G):
         new_action = idxes[pos]

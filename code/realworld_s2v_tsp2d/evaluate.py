@@ -61,7 +61,9 @@ def GetGraph(fname, need_norm):
     assert len(coors) == n_nodes
     g = nx.Graph()
     g.add_nodes_from(range(n_nodes))
-    nx.set_node_attributes(g, 'pos', coors)
+    # nx.set_node_attributes(g, 'pos', coors) # Original line causing error
+    for node_index, pos_value in coors.items():
+        g.nodes[node_index]['pos'] = pos_value
     return g
 
 def dist(coors, i, j):

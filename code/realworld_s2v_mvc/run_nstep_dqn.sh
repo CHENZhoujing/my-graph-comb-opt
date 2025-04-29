@@ -34,7 +34,7 @@ max_n=300
 num_env=10
 mem_size=500000
 prob_q=7
-max_iter=1000000
+max_iter=50000
 
 # folder to save the trained model
 save_dir=$result_root/embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden-prob_q-$prob_q
@@ -44,7 +44,7 @@ then
     mkdir -p $save_dir
 fi
 
-python main.py \
+python2 main.py \
     -prob_q $prob_q \
     -n_step $n_step \
     -data_root ../../data/memetracker \

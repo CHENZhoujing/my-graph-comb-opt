@@ -40,7 +40,7 @@ max_n=$nnode
 num_env=1
 mem_size=50000
 
-max_iter=200000
+max_iter=50000
 
 # folder to save the trained model
 save_dir=$result_root/ntype-$net_type-embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden
@@ -50,7 +50,7 @@ then
     mkdir -p $save_dir
 fi
 
-python main.py \
+python2 main.py \
     -net_type $net_type \
     -n_step $n_step \
     -dev_id $dev_id \

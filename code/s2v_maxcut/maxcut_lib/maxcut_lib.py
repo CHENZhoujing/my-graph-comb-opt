@@ -21,7 +21,7 @@ class MaxcutLib(object):
         self.ngraph_test = 0
 
     def __CtypeNetworkX(self, g):
-        edges = list(g.edges_iter(data='weight', default=1))
+        edges = list(g.edges(data='weight', default=1))
         e_list_from = (ctypes.c_int * len(edges))()
         e_list_to = (ctypes.c_int * len(edges))()
         weights = (ctypes.c_double * len(edges))()

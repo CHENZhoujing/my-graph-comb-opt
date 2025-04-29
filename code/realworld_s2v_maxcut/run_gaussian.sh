@@ -45,7 +45,7 @@ then
     mkdir -p $save_dir
 fi
 
-python gaussian.py \
+python2 gaussian.py \
     -dev_id $dev_id \
     -net_type $net_type \
     -avg_global $avg_global \

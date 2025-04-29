@@ -36,7 +36,7 @@ max_n=20
 num_env=1
 mem_size=500000
 
-max_iter=1000000
+max_iter=50000
 
 # folder to save the trained model
 save_dir=$result_root/embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden
@@ -46,7 +46,7 @@ then
     mkdir -p $save_dir
 fi
 
-python main.py \
+python2 main.py \
     -n_step $n_step \
     -dev_id $dev_id \
     -min_n $min_n \

@@ -35,7 +35,7 @@ max_n=130
 num_env=10
 mem_size=50000
 
-max_iter=200000
+max_iter=50000
 
 # folder to save the trained model
 save_dir=$result_root/ntype-$net_type-embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden-ag-$avg_global
@@ -45,7 +45,7 @@ then
     mkdir -p $save_dir
 fi
 
-python main.py \
+python2 main.py \
     -dev_id $dev_id \
     -net_type $net_type \
     -avg_global $avg_global \

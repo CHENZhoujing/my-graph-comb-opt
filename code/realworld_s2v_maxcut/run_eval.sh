@@ -1,6 +1,6 @@
 #!/bin/bash
 
-result_root=results/dqn-gaussian
+result_root=results/dqn
 
 # max belief propagation iteration
 max_bp_iter=3
@@ -40,7 +40,7 @@ max_iter=200000
 # folder to save the trained model
 save_dir=$result_root/ntype-$net_type-embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden-ag-$avg_global
 
-python evaluate.py \
+python2 evaluate.py \
     -dev_id $dev_id \
     -net_type $net_type \
     -avg_global $avg_global \

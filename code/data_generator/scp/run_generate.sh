@@ -11,7 +11,7 @@ then
     mkdir -p $output_root
 fi
 
-python gen_graph_only.py \
+python2 gen_graph_only.py \
     -save_dir $output_root \
     -max_n $max_n \
     -min_n $min_n \

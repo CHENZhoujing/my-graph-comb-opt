@@ -2,27 +2,26 @@
 
 g_type=barabasi_albert
 
-data_test=../../data/maxcut/gtype-$g_type-nrange-15-20-n_graph-1000-p-0.00-m-4.pkl
+data_test=../../data/mvc/gtype-$g_type-nrange-15-20-n_graph-1000-p-0.00-m-4.pkl
 
 result_root=results/dqn-$g_type
 
 # max belief propagation iteration
-max_bp_iter=3
+max_bp_iter=5
 
 # embedding size
 embed_dim=64
 
 # gpu card id
-dev_id=1
+dev_id=3
 
 # max batch size for training/testing
-batch_size=128
+batch_size=64
 
-net_type=NewQNet
-avg_global=0
+net_type=QNet
 
 # set reg_hidden=0 to make a linear regression
-reg_hidden=32
+reg_hidden=64
 
 # learning rate
 learning_rate=0.0001
@@ -31,24 +30,23 @@ learning_rate=0.0001
 w_scale=0.01
 
 # nstep
-n_step=1
+n_step=5
 
 min_n=15
 max_n=20
 
 num_env=10
-mem_size=50000
+mem_size=500000
 
-max_iter=50000
+max_iter=100000
 
 # folder to save the trained model
-save_dir=$result_root/ntype-$net_type-embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden-ag-$avg_global
+save_dir=$result_root/embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden
 
-python2 evaluate.py \
+python2 solve_direct.py \
     -n_step $n_step \
     -dev_id $dev_id \
     -data_test $data_test \
-    -avg_global $avg_global \
     -min_n $min_n \
     -max_n $max_n \
     -num_env $num_env \

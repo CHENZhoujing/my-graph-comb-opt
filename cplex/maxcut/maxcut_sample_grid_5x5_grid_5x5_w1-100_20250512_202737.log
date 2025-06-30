@@ -1,0 +1,74 @@
+Maximum Cut Analysis Report
+Generated at: 2025-05-12 20:27:37
+================================================================================
+
+
+Graph #1
+----------------------------------------
+Number of nodes: 25
+Number of edges: 40
+
+Solution Status: Successful
+Maximum cut size: 2201.0
+Selected vertices: [3, 9, 13, 19, 23, 17, 1, 7, 11, 5, 15, 21]
+Solve time: 0.0266 seconds
+
+================================================================================
+
+Graph #2
+----------------------------------------
+Number of nodes: 25
+Number of edges: 40
+
+Solution Status: Successful
+Maximum cut size: 2168.0
+Selected vertices: [9, 19, 23, 17, 13, 7, 11, 1, 21, 5, 15, 3]
+Solve time: 0.0055 seconds
+
+================================================================================
+
+Graph #3
+----------------------------------------
+Number of nodes: 25
+Number of edges: 40
+
+Solution Status: Successful
+Maximum cut size: 2021.0
+Selected vertices: [12, 8, 16, 4, 10, 2, 6, 0, 18, 22, 14, 24, 20]
+Solve time: 0.0051 seconds
+
+================================================================================
+
+Graph #4
+----------------------------------------
+Number of nodes: 25
+Number of edges: 40
+
+Solution Status: Successful
+Maximum cut size: 1755.0
+Selected vertices: [6, 10, 12, 8, 16, 2, 22, 14, 20, 4, 0, 18, 24]
+Solve time: 0.0050 seconds
+
+================================================================================
+
+Graph #5
+----------------------------------------
+Number of nodes: 25
+Number of edges: 40
+
+Solution Status: Successful
+Maximum cut size: 2178.0
+Selected vertices: [9, 13, 7, 3, 1, 19, 17, 5, 11, 23, 15, 21]
+Solve time: 0.0069 seconds
+
+================================================================================
+
+
+Summary Statistics
+----------------------------------------
+File processed: sample_grid_5x5_grid_5x5_w1-100.json
+Total graphs processed: 5
+Successful solutions: 5
+Average maximum cut size: 2064.60
+Average solve time: 0.0098 seconds
+================================================================================

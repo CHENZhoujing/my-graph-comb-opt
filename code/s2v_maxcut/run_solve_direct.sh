@@ -2,6 +2,8 @@
 
 g_type=barabasi_albert
 
+data_test=../../data/maxcut/gtype-$g_type-nrange-15-25-n_graph-1000-p-0.00-m-4.pkl
+
 result_root=results/dqn-$g_type
 
 # max belief propagation iteration
@@ -11,7 +13,7 @@ max_bp_iter=3
 embed_dim=64
 
 # gpu card id
-dev_id=0
+dev_id=1
 
 # max batch size for training/testing
 batch_size=128
@@ -34,7 +36,7 @@ n_step=1
 min_n=15
 max_n=25
 
-num_env=1
+num_env=10
 mem_size=50000
 
 max_iter=50000
@@ -42,16 +44,11 @@ max_iter=50000
 # folder to save the trained model
 save_dir=$result_root/ntype-$net_type-embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden-ag-$avg_global
 
-if [ ! -e $save_dir ];
-then
-    mkdir -p $save_dir
-fi
-
-python2 main.py \
-    -net_type $net_type \
-    -dev_id $dev_id \
-    -avg_global $avg_global \
+python2 solve_direct.py \
     -n_step $n_step \
+    -dev_id $dev_id \
+    -data_test $data_test \
+    -avg_global $avg_global \
     -min_n $min_n \
     -max_n $max_n \
     -num_env $num_env \
@@ -68,5 +65,4 @@ python2 main.py \
     -reg_hidden $reg_hidden \
     -momentum 0.9 \
     -l2 0.00 \
-    -w_scale $w_scale \
-    2>&1 | tee $save_dir/log-$min_n-${max_n}.txt
+    -w_scale $w_scale

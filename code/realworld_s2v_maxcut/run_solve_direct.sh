@@ -1,8 +1,6 @@
 #!/bin/bash
 
-g_type=barabasi_albert
-
-result_root=results/dqn-$g_type
+result_root=results/dqn
 
 # max belief propagation iteration
 max_bp_iter=3
@@ -31,33 +29,28 @@ w_scale=0.01
 # nstep
 n_step=1
 
-min_n=15
-max_n=25
+min_n=128
+max_n=130
 
-num_env=1
+num_env=10
 mem_size=50000
 
-max_iter=50000
+max_iter=200000
 
 # folder to save the trained model
 save_dir=$result_root/ntype-$net_type-embed-$embed_dim-nbp-$max_bp_iter-rh-$reg_hidden-ag-$avg_global
 
-if [ ! -e $save_dir ];
-then
-    mkdir -p $save_dir
-fi
-
-python2 main.py \
-    -net_type $net_type \
+python2 solve_direct.py \
     -dev_id $dev_id \
+    -net_type $net_type \
     -avg_global $avg_global \
+    -data_root ../../data \
     -n_step $n_step \
     -min_n $min_n \
     -max_n $max_n \
     -num_env $num_env \
     -max_iter $max_iter \
     -mem_size $mem_size \
-    -g_type $g_type \
     -learning_rate $learning_rate \
     -max_bp_iter $max_bp_iter \
     -net_type $net_type \
@@ -68,5 +61,4 @@ python2 main.py \
     -reg_hidden $reg_hidden \
     -momentum 0.9 \
     -l2 0.00 \
-    -w_scale $w_scale \
-    2>&1 | tee $save_dir/log-$min_n-${max_n}.txt
+    -w_scale $w_scale

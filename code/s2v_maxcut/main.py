@@ -23,7 +23,7 @@ def gen_graph(opt):
     elif opt['g_type'] == 'barabasi_albert':
         g = nx.barabasi_albert_graph(n = cur_n, m = 4)
     for edge in nx.edges(g):
-        g[edge[0]][edge[1]]['weight'] = random.uniform(0,1)
+        g[edge[0]][edge[1]]['weight'] = random.uniform(1,100)
     return g
 
 def gen_new_graphs(opt):
@@ -45,18 +45,18 @@ def find_model_file(opt):
     max_n = int(opt['max_n'])
     min_n = int(opt['min_n'])
     log_file = None
+    prefix = ''
     if max_n < 100:
         return None
-	if min_n == 50 and max_n == 100:
-	    n1 = 40
-	    n2 = 50
-        elif min_n == 100 and max_n == 200:
-            n1 = 50
-            n2 = 100
-        else:
-            n1 = min_n - 100
-            n2 = max_n - 100
-	prefix = ''
+    if min_n == 50 and max_n == 100:
+        n1 = 40
+        n2 = 50
+    elif min_n == 100 and max_n == 200:
+        n1 = 50
+        n2 = 100
+    else:
+        n1 = min_n - 100
+        n2 = max_n - 100
 
     log_file = '%s/%slog-%d-%d.txt' % (opt['save_dir'], prefix, n1, n2)
     if not os.path.isfile(log_file):

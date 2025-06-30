@@ -1,0 +1,74 @@
+Maximum Cut Analysis Report
+Generated at: 2025-05-12 20:43:04
+================================================================================
+
+
+Graph #1
+----------------------------------------
+Number of nodes: 9
+Number of edges: 12
+
+Solution Status: Successful
+Maximum cut size: 539.0
+Selected vertices: [8, 2, 4, 0, 6]
+Solve time: 0.0164 seconds
+
+================================================================================
+
+Graph #2
+----------------------------------------
+Number of nodes: 9
+Number of edges: 12
+
+Solution Status: Successful
+Maximum cut size: 586.0
+Selected vertices: [6, 0, 4, 2, 8]
+Solve time: 0.0012 seconds
+
+================================================================================
+
+Graph #3
+----------------------------------------
+Number of nodes: 9
+Number of edges: 12
+
+Solution Status: Successful
+Maximum cut size: 639.0
+Selected vertices: [2, 8, 4, 0, 6]
+Solve time: 0.0009 seconds
+
+================================================================================
+
+Graph #4
+----------------------------------------
+Number of nodes: 9
+Number of edges: 12
+
+Solution Status: Successful
+Maximum cut size: 544.0
+Selected vertices: [1, 3, 5, 7]
+Solve time: 0.0014 seconds
+
+================================================================================
+
+Graph #5
+----------------------------------------
+Number of nodes: 9
+Number of edges: 12
+
+Solution Status: Successful
+Maximum cut size: 535.0
+Selected vertices: [8, 2, 0, 4, 6]
+Solve time: 0.0012 seconds
+
+================================================================================
+
+
+Summary Statistics
+----------------------------------------
+File processed: sample_grid_3x3_grid_3x3_w1-100.json
+Total graphs processed: 5
+Successful solutions: 5
+Average maximum cut size: 568.60
+Average solve time: 0.0042 seconds
+================================================================================

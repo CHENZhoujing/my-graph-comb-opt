@@ -40,8 +40,8 @@ if __name__ == '__main__':
     assert p is not None
     assert graph_type is not None
     
-    w_min = 0.0
-    w_max = 1.0
+    w_min = 1.0
+    w_max = 100.0
     seed = 1
     np.random.seed(seed=seed)
     

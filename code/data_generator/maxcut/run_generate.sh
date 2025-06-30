@@ -1,7 +1,7 @@
 #!/bin/bash
 
 min_n=15
-max_n=20
+max_n=25
 gtype=barabasi_albert
 p=0.00
 m=4

@@ -42,3 +42,9 @@ results/
 *.exe
 *.out
 *.app
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
